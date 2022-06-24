@@ -108,6 +108,8 @@ span {
 
 i {
   transform: scale(2) translateY(-5%);
+  -webkit-transform: scale(2) translateY(-5%);
+  -moz-transform: scale(2) translateY(-5%);
 }
 
 @media (min-width: 600px) {
