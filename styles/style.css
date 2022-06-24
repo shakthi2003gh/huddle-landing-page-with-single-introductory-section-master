@@ -10,6 +10,7 @@
 html {
   font-size: 62.5%;
   min-width: 375px;
+  min-height: 100vh;
 }
 
 /* >Color palette */
@@ -22,8 +23,110 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   color: white;
+  background: url(/images/bg-mobile.svg) no-repeat,
+    linear-gradient(to right, var(--bg), var(--bg));
+}
+
+h1 {
+  max-width: 410px;
+  font-size: 2.5rem;
 }
 
 p {
   font-family: "Open Sans", sans-serif;
+  font-size: 1.55rem;
+  line-height: 2.7ch;
+  opacity: 0.8;
+  max-width: 440px;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url(/images/bg-desktop.svg) no-repeat 100%,
+      linear-gradient(to right, var(--bg), var(--bg));
+  }
+
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+
+/* >header */
+header {
+  margin: 3rem;
+}
+
+header img {
+  width: 150px;
+}
+
+/* >main */
+main {
+  display: grid;
+}
+
+main img {
+  justify-self: center;
+  width: 80%;
+}
+
+.content {
+  text-align: center;
+  margin: 4rem;
+}
+
+button {
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 220px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 2px 4px 2px rgb(0 0 0 / 27%);
+  color: var(--bg);
+  background-color: white;
+}
+
+/* >footer */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+span {
+  display: grid;
+  place-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 100px;
+  opacity: 0.8;
+}
+
+i {
+  transform: scale(2) translateY(-5%);
+}
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 6rem;
+  }
+
+  main img {
+    align-self: center;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  footer {
+    position: absolute;
+    right: 4rem;
+    bottom: 0;
+  }
 }
