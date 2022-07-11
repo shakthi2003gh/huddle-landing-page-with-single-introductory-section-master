@@ -28,8 +28,9 @@ body {
 }
 
 h1 {
-  max-width: 410px;
   font-size: 2.5rem;
+  max-width: 410px;
+  margin: 16.75px auto;
 }
 
 p {
@@ -38,16 +39,19 @@ p {
   line-height: 2.7ch;
   opacity: 0.8;
   max-width: 440px;
+  margin: 15.5px auto;
 }
 
 @media (min-width: 600px) {
   body {
     background: url(/images/bg-desktop.svg) no-repeat 100%,
       linear-gradient(to right, var(--bg), var(--bg));
+    background-size: 90vw 100vh;
   }
 
   h1 {
     font-size: 3.6rem;
+    margin: 16.75px 0;
   }
 }
 
@@ -113,17 +117,29 @@ i {
 }
 
 @media (min-width: 600px) {
+  header {
+    max-width: 1300px;
+    margin: 3rem auto;
+  }
+
   main {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
     margin-top: 6rem;
   }
 
   main img {
-    align-self: center;
+    width: clamp(250px, 50vw, 490px);
+    height: clamp(200px, 80vw, 370px);
+    margin: auto;
+    margin-right: 0;
   }
 
   .content {
     text-align: left;
+    margin: auto;
+    margin-left: 0;
   }
 
   footer {
